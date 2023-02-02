@@ -16,7 +16,7 @@ function animals(arg) {
 
         couter++; 
         if (couter % 3 === 0) {
-            buisc = (foodForDog + foodForCat) * 0.1;
+            buisc += (foodForDog + foodForCat) * 0.1;
             
         }
 
