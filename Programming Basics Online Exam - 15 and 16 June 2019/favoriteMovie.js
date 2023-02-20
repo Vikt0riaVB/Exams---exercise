@@ -8,20 +8,20 @@ function movie(input) {
             console.log(`The best movie for you is ${bestMovie} with ${maxSum} ASCII sum.`);
             return;
         }
-        let duljina = currentMovie.length;
-        for (let k = 0; k < duljina; k++) {
+        let length = currentMovie.length;
+        for (let i = 0; i < length; i++) {
             if (
-                currentMovie.charCodeAt(k) >= 65 &&
-                currentMovie.charCodeAt(k) <= 90
+                currentMovie.charCodeAt(i) >= 65 &&
+                currentMovie.charCodeAt(i) <= 90
             ) {
                 sum -= currentMovie.length;
             } else if (
-                currentMovie.charCodeAt(k) >= 97 &&
-                currentMovie.charCodeAt(k) <= 122
+                currentMovie.charCodeAt(i) >= 97 &&
+                currentMovie.charCodeAt(i) <= 122
             ) {
                 sum -= 2 * currentMovie.length;
             }
-            sum += currentMovie.charCodeAt(k)
+            sum += currentMovie.charCodeAt(i)
         }
         if (sum > maxSum) {
             maxSum = sum;
